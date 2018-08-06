@@ -68,10 +68,7 @@ button, .sm-icon {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -105,10 +102,6 @@ button, .sm-icon {
   background-color: #147d68;
 }
 
-.main-jumbotron .bolek {
-  display: none;
-}
-
 .main-jumbotron .social-media {
   position: absolute;
   bottom: 0;
@@ -121,12 +114,13 @@ button, .sm-icon {
   -ms-flex-pack: center;
       justify-content: center;
   height: 50px;
+  margin-bottom: 20px;
 }
 
 .main-jumbotron .social-media .sm-icon {
   height: 20px;
-  width: 20px;
-  margin: 10px 30px;
+  width: 23px;
+  margin: 20px;
   transition: 2s;
 }
 
@@ -135,11 +129,11 @@ button, .sm-icon {
 }
 
 .main-jumbotron .social-media .twitter {
-  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-twitter.png) center no-repeat;
+  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-twitter.png) center/cover no-repeat;
 }
 
 .main-jumbotron .social-media .flickr {
-  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-flickr.png) center no-repeat;
+  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-flickr.png) center/cover no-repeat;
 }
 
 .main-jumbotron .social-media .dribbble {
