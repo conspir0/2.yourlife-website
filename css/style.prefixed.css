@@ -5,10 +5,16 @@ body {
   padding: 0;
 }
 
+button, .sm-icon {
+  cursor: pointer;
+}
+
 .main-jumbotron {
+  position: relative;
   width: 100%;
   height: 100vh;
   background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/main-jumbotron/main-jumbotron.png) center/cover no-repeat;
+  color: #fff;
 }
 
 .main-jumbotron nav {
@@ -46,7 +52,6 @@ body {
   font-size: 20px;
   text-decoration: none;
   text-shadow: 0 0 10px #fff;
-  color: #fff;
 }
 
 .main-jumbotron .navbar-dark .navbar-toggler-icon {
@@ -55,5 +60,89 @@ body {
 
 .main-jumbotron .hide-menu {
   display: none;
+}
+
+.main-jumbotron .main-jumbotron-content {
+  height: calc(100vh - 180px);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+}
+
+.main-jumbotron .main-jumbotron-content h1 {
+  font-size: 36px;
+  letter-spacing: 5px;
+}
+
+.main-jumbotron .main-jumbotron-content h7 {
+  font-size: 16px;
+  font-weight: 100;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+
+.main-jumbotron .main-jumbotron-content button {
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: 140px;
+  min-height: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #16a085;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.main-jumbotron .main-jumbotron-content button:hover {
+  background-color: #147d68;
+}
+
+.main-jumbotron .bolek {
+  display: none;
+}
+
+.main-jumbotron .social-media {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 50px;
+}
+
+.main-jumbotron .social-media .sm-icon {
+  height: 20px;
+  width: 20px;
+  margin: 10px 30px;
+  transition: 2s;
+}
+
+.main-jumbotron .social-media .sm-icon:hover {
+  transform: rotate(360deg);
+}
+
+.main-jumbotron .social-media .twitter {
+  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-twitter.png) center no-repeat;
+}
+
+.main-jumbotron .social-media .flickr {
+  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-flickr.png) center no-repeat;
+}
+
+.main-jumbotron .social-media .dribbble {
+  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-dribbble.png) center no-repeat;
 }
 /*# sourceMappingURL=style.prefixed.css.map */

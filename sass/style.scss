@@ -1,14 +1,26 @@
+$color-MJ: #fff;
+$btn-color: #fff;
+$btn-bgcolor: #16a085;
+$btn-hover-bgcolor: #147d68;
+$transition-time: 0.5s;
+
 body {
     box-sizing: border-box;
     font-size: 18px;
     margin: 0;
     padding: 0;
 }
+
+button, .sm-icon {
+    cursor: pointer;
+}
 // Main jumbotron ---------------------------------------------------------
-.main-jumbotron { 
+.main-jumbotron {
+    position: relative;
     width: 100%;
     height: 100vh;
     background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/main-jumbotron/main-jumbotron.png) center/cover no-repeat;
+    color: $color-MJ;
     
     // Navigation
     nav {
@@ -29,13 +41,13 @@ body {
                     font-weight: bold;
                     line-height: 20px;
                     letter-spacing: 5px;
-                    color: #fff;
-                    transition: 0.5s;
+                    color: $color-MJ;
+                    transition: $transition-time;
                     &:hover {
                         font-size: 20px;
                         text-decoration: none;
-                        text-shadow: 0 0 10px #fff;
-                        color: #fff;
+                        text-shadow: 0 0 10px $color-MJ;
+
                     }
                 }
             }
@@ -49,5 +61,70 @@ body {
     }
     
     // Main jumbotron content
+    .main-jumbotron-content {
+        height: calc(100vh - 180px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        h1{
+            font-size: 36px;
+            letter-spacing: 5px;
+        }
+        h7 {
+            font-size: 16px;
+            font-weight: 100;
+            margin-bottom: 30px;
+            letter-spacing: 3px;
+        }
+        button {
+            margin: 0 auto;
+            padding: 10px 20px;
+            width: 140px;
+            min-height: 40px;
+            font-size: 12px;
+            font-weight: 500;
+            background-color: $btn-bgcolor;
+            border-radius: 5px;
+            border: none;
+            color: $btn-color;
+            transition: $transition-time;
+            &:hover {
+                background-color: $btn-hover-bgcolor;
+            }
+        }
+    }
+        .bolek {
+            display: none;
+        }
     // Social media
+    .social-media {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 50px;
+        .sm-icon {
+            height: 20px;
+            width: 20px;
+            margin: 10px 30px;
+            transition: 2s;
+            &:hover {
+                transform: rotate(360deg);
+            }
+        }
+        .twitter {
+            background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-twitter.png) center no-repeat;
+        }
+        .flickr {
+            background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-flickr.png) center no-repeat;
+        }
+        .dribbble {
+            background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-dribbble.png) center no-repeat;
+        }
+    }
 }
