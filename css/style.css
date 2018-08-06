@@ -1,0 +1,57 @@
+body {
+  box-sizing: border-box;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-jumbotron {
+  width: 100%;
+  height: 100vh;
+  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/main-jumbotron/main-jumbotron.png) center/cover no-repeat;
+}
+
+.main-jumbotron nav {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.main-jumbotron nav ul {
+  width: 100%;
+  justify-content: center;
+}
+
+.main-jumbotron nav ul li {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  margin: auto;
+  padding: 15px 0;
+}
+
+.main-jumbotron nav ul li a {
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: 5px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.main-jumbotron nav ul li a:hover {
+  font-size: 20px;
+  text-decoration: none;
+  text-shadow: 0 0 10px #fff;
+  color: #fff;
+}
+
+.main-jumbotron .navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.main-jumbotron .hide-menu {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
