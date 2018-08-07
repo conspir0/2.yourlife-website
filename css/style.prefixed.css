@@ -7,12 +7,46 @@ body {
 
 button, .sm-icon {
   cursor: pointer;
+  padding: 10px 20px;
+  width: 140px;
+  min-height: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #16a085;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  transition: 0.5s;
+}
+
+button:hover, .sm-icon:hover {
+  background-color: #147d68;
+}
+
+h1 {
+  font-size: 36px;
+  letter-spacing: 5px;
+}
+
+h7 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  color: #16a085;
+}
+
+p {
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 1px;
 }
 
 .main-jumbotron {
   position: relative;
   width: 100%;
   height: 100vh;
+  max-height: 800px;
   background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/main-jumbotron/main-jumbotron.png) center/cover no-repeat;
   color: #fff;
 }
@@ -20,6 +54,15 @@ button, .sm-icon {
 .main-jumbotron nav {
   max-width: 1000px;
   margin: auto;
+}
+
+.main-jumbotron nav button {
+  width: auto;
+}
+
+.main-jumbotron nav button:hover {
+  background-color: inherit;
+  opacity: 0.5;
 }
 
 .main-jumbotron nav ul {
@@ -72,34 +115,13 @@ button, .sm-icon {
   text-align: center;
 }
 
-.main-jumbotron .main-jumbotron-content h1 {
-  font-size: 36px;
-  letter-spacing: 5px;
-}
-
 .main-jumbotron .main-jumbotron-content h7 {
-  font-size: 16px;
+  color: #fff;
   font-weight: 100;
-  margin-bottom: 30px;
-  letter-spacing: 3px;
 }
 
 .main-jumbotron .main-jumbotron-content button {
   margin: 0 auto;
-  padding: 10px 20px;
-  width: 140px;
-  min-height: 40px;
-  font-size: 12px;
-  font-weight: 500;
-  background-color: #16a085;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  transition: 0.5s;
-}
-
-.main-jumbotron .main-jumbotron-content button:hover {
-  background-color: #147d68;
 }
 
 .main-jumbotron .social-media {
@@ -129,14 +151,70 @@ button, .sm-icon {
 }
 
 .main-jumbotron .social-media .twitter {
-  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-twitter.png) center/cover no-repeat;
+  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-twitter.png) center no-repeat;
 }
 
 .main-jumbotron .social-media .flickr {
-  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-flickr.png) center/cover no-repeat;
+  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-flickr.png) center no-repeat;
 }
 
 .main-jumbotron .social-media .dribbble {
   background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-dribbble.png) center no-repeat;
+}
+
+.hand {
+  background-color: #f5f6f7;
+  height: 500px;
+}
+
+.hand .col-box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-top: 120px;
+  height: 100%;
+}
+
+.hand .col-box p {
+  margin-bottom: 30px;
+}
+
+.hand .col-phone {
+  position: relative;
+}
+
+.hand .col-phone img {
+  position: absolute;
+  right: 5%;
+  bottom: -410px;
+  transition: 3s;
+}
+
+@media (max-width: 992px) {
+  .hand .col-phone img {
+    right: 10%;
+    bottom: -360px;
+    height: 150%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hand .col-phone img {
+    height: 120%;
+    bottom: -310px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hand .col-box {
+    text-align: center;
+  }
+  .hand .col-box p {
+    font-size: 9px;
+  }
+  .hand .col-box button {
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=style.prefixed.css.map */

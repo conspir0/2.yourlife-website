@@ -1,4 +1,7 @@
 $color-MJ: #fff;
+$bg-color: #f5f6f7;
+$title-color: #16a085;
+$font-color: #373737;
 $btn-color: #fff;
 $btn-bgcolor: #16a085;
 $btn-hover-bgcolor: #147d68;
@@ -13,12 +16,43 @@ body {
 
 button, .sm-icon {
     cursor: pointer;
+    padding: 10px 20px;
+    width: 140px;
+    min-height: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: $btn-bgcolor;
+    border-radius: 5px;
+    border: none;
+    color: $btn-color;
+    transition: $transition-time;
+    &:hover {
+        background-color: $btn-hover-bgcolor;
+    }
 }
+h1{
+    font-size: 36px;
+    letter-spacing: 5px;
+}
+h7 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    color: $title-color;
+}
+p {
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
 // Main jumbotron ---------------------------------------------------------
 .main-jumbotron {
     position: relative;
     width: 100%;
     height: 100vh;
+    max-height: 800px;
     background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/main-jumbotron/main-jumbotron.png) center/cover no-repeat;
     color: $color-MJ;
     
@@ -26,6 +60,13 @@ button, .sm-icon {
     nav {
         max-width: 1000px;
         margin: auto;
+        button {
+            width: auto;
+            &:hover {
+                background-color: inherit;
+                opacity: 0.5;
+            }
+        }
         ul {
             width: 100%;
             justify-content: center;
@@ -67,31 +108,12 @@ button, .sm-icon {
         flex-direction: column;
         margin-top: 50px;
         text-align: center;
-        h1{
-            font-size: 36px;
-            letter-spacing: 5px;
-        }
         h7 {
-            font-size: 16px;
+            color: $color-MJ;
             font-weight: 100;
-            margin-bottom: 30px;
-            letter-spacing: 3px;
         }
         button {
             margin: 0 auto;
-            padding: 10px 20px;
-            width: 140px;
-            min-height: 40px;
-            font-size: 12px;
-            font-weight: 500;
-            background-color: $btn-bgcolor;
-            border-radius: 5px;
-            border: none;
-            color: $btn-color;
-            transition: $transition-time;
-            &:hover {
-                background-color: $btn-hover-bgcolor;
-            }
         }
     }
     
@@ -116,13 +138,63 @@ button, .sm-icon {
             }
         }
         .twitter {
-            background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-twitter.png) center/cover no-repeat;
+            background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-twitter.png) center no-repeat;
         }
         .flickr {
-            background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-flickr.png) center/cover no-repeat;
+            background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-flickr.png) center no-repeat;
         }
         .dribbble {
             background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-dribbble.png) center no-repeat;
+        }
+    }
+}
+
+// Article - hand ---------------------------------------------------------
+.hand {
+    background-color: $bg-color;
+    height: 500px;
+    .col-box {
+        display: flex;
+        flex-direction: column;
+        margin-top: 120px;
+        height: 100%;
+        p {                
+            margin-bottom: 30px;
+        }
+    }
+    .col-phone {
+        position: relative;
+        img {
+            position: absolute;
+            right: 5%;
+            bottom: -410px;
+            transition: 3s;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .hand .col-phone img {
+        right: 10%;
+        bottom: -360px;
+        height: 150%;
+    }
+
+}
+@media (max-width: 768px) {
+    .hand .col-phone img {
+        height: 120%;
+        bottom: -310px;
+    }
+}
+@media (max-width: 576px) {
+    .hand .col-box {
+        text-align: center;
+        p {
+            font-size: 9px;
+        }
+        button {
+            margin: 0 auto;
         }
     }
 }
