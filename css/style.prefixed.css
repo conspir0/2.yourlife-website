@@ -165,6 +165,7 @@ p {
 .hand {
   background-color: #f5f6f7;
   height: 500px;
+  overflow: hidden;
 }
 
 .hand .col-box {
@@ -180,19 +181,68 @@ p {
   margin-bottom: 30px;
 }
 
-.hand .col-phone {
+.hand .col-phone-hand {
   position: relative;
 }
 
-.hand .col-phone img {
+.hand .col-phone-hand img {
   position: absolute;
   right: 5%;
   bottom: -410px;
   transition: 3s;
 }
 
+.slide-text {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slide-text img {
+  position: absolute;
+  bottom: -170px;
+}
+
+.slide-text .slider {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  width: 100%;
+  height: 400px;
+  padding: 50px 20px 50px 50px;
+}
+
+.slide-text .slider p {
+  text-align: justify;
+  margin: 30px 30px 0 0;
+}
+
+.slide-text .slider button {
+  margin-top: 20px;
+}
+
+.slide-text .btn-arrow a {
+  color: #373737;
+  padding-left: 20px;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.slide-text .btn-arrow a:hover {
+  text-decoration: none;
+}
+
+.slide-text .btn-arrow a:first-child {
+  padding-left: 50px;
+}
+
 @media (max-width: 992px) {
-  .hand .col-phone img {
+  .hand .col-phone-hand img {
     right: 10%;
     bottom: -360px;
     height: 150%;
@@ -200,9 +250,12 @@ p {
 }
 
 @media (max-width: 768px) {
-  .hand .col-phone img {
+  .hand .col-phone-hand img {
     height: 120%;
     bottom: -310px;
+  }
+  .slide-text .col-phone {
+    display: none;
   }
 }
 

@@ -9,3 +9,9 @@ burger.addEventListener('click', function(event) {
     // Hide logo
     logo.classList.toggle('hide-menu');
 })
+
+//Slide text
+$('.carousel').carousel({
+    interval: 2000,
+    pause: hover
+})
