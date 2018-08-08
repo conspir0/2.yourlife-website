@@ -1,4 +1,4 @@
-$color-MJ: #fff;
+$color-J: #fff;
 $bg-color: #f5f6f7;
 $title-color: #16a085;
 $font-color: #373737;
@@ -65,7 +65,7 @@ p {
     height: 100vh;
     max-height: 800px;
     background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/main-jumbotron/main-jumbotron.png) center/cover no-repeat;
-    color: $color-MJ;
+    color: $color-J;
     
     // Navigation
     nav {
@@ -93,12 +93,12 @@ p {
                     font-weight: bold;
                     line-height: 20px;
                     letter-spacing: 5px;
-                    color: $color-MJ;
+                    color: $color-J;
                     transition: $transition-time;
                     &:hover {
                         font-size: 20px;
                         text-decoration: none;
-                        text-shadow: 0 0 10px $color-MJ;
+                        text-shadow: 0 0 10px $color-J;
 
                     }
                 }
@@ -120,7 +120,7 @@ p {
         margin-top: 50px;
         text-align: center;
         h7 {
-            color: $color-MJ;
+            color: $color-J;
             font-weight: 100;
         }
         button {
@@ -257,6 +257,40 @@ p {
     }
 }
 
+// Gallery ---------------------------------------------------------
+.sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(/images/sub-jumbotron/sub-jumbotron.png) center/cover no-repeat;
+    height: 100vh;
+    h1 {
+        color: $color-J;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    form {
+        display: flex;
+        .sub-input {
+            height: 50px;
+            width: 50vw;
+            max-width: 250px;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 5px 0 0 5px;
+            border: none;
+        }
+        .btn-sub {
+            height: 50px;
+            width: 50px;
+            border-radius: 0 5px 5px 0;
+            background: url(/images/small-icons/fa-check.png) center no-repeat;
+            background-color: $btn-bgcolor;
+        }     
+    }
+}
+
 
 @media (max-width: 1199px) {
     .gallery {
@@ -284,8 +318,11 @@ p {
         bottom: -360px;
         height: 150%;
     }
-    .gallery .col-text {
-        display: none;
+    .gallery {
+        height: 700px;
+        .col-text {
+            display: none;
+        }
     }
 }
 
@@ -297,22 +334,25 @@ p {
     .slide-text .col-phone {
         display: none;
     }
-    .gallery .col-gallery {
-        .slider-gallery {
-            flex-direction: column;
-            justify-content: center;
-            img {
-                margin: 10px auto;
-                height: 80%;
-                width: 80%;
+    .gallery {
+        height: 100vh;
+        .col-gallery {
+            .slider-gallery {
+                flex-direction: column;
+                justify-content: center;
+                img {
+                    margin: 10px auto;
+                    height: 80%;
+                    width: 80%;
+                }
             }
-        }
-        .btn-arrow {
-            margin: auto;
-            text-align: center;
-            float: none;
-            a {
-                padding: 5px;
+            .btn-arrow {
+                margin: auto;
+                text-align: center;
+                float: none;
+                a {
+                    padding: 5px;
+                }
             }
         }
     }      
