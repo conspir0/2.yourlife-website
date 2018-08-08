@@ -31,7 +31,7 @@ h1 {
 h7 {
   font-size: 16px;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   letter-spacing: 3px;
   color: #16a085;
 }
@@ -40,6 +40,17 @@ p {
   font-size: 12px;
   line-height: 25px;
   letter-spacing: 1px;
+}
+
+.btn-arrow a {
+  padding-left: 10px;
+  color: #373737;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.btn-arrow a:hover {
+  text-decoration: none;
 }
 
 .main-jumbotron {
@@ -226,19 +237,73 @@ p {
   margin-top: 20px;
 }
 
-.slide-text .btn-arrow a {
-  color: #373737;
-  padding-left: 20px;
-  font-weight: 800;
-  font-size: 25px;
-}
-
-.slide-text .btn-arrow a:hover {
-  text-decoration: none;
-}
-
 .slide-text .btn-arrow a:first-child {
   padding-left: 50px;
+}
+
+.gallery {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  min-height: 500px;
+  height: 100%;
+  background-color: #f5f6f7;
+}
+
+.gallery .col-text {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 50px;
+  text-align: center;
+}
+
+.gallery .col-text img {
+  margin: 0 auto 30px;
+  height: 60px;
+  width: 60px;
+}
+
+.gallery .col-text h7 {
+  font-weight: 400;
+}
+
+.gallery .col-gallery .btn-arrow {
+  float: right;
+}
+
+.gallery .col-gallery .slider-gallery {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.gallery .col-gallery .slider-gallery img {
+  margin-left: 20px;
+  width: 340px;
+}
+
+.gallery .col-gallery .slider-gallery img:hover {
+  filter: grayscale(70%);
+}
+
+@media (max-width: 1199px) {
+  .gallery .col-gallery .slider-gallery img {
+    height: 95%;
+    width: 320px;
+  }
+  .gallery .col-text img {
+    margin-bottom: 10px;
+  }
+  .gallery .col-text h7 {
+    margin-bottom: 10px;
+  }
+  .gallery .col-text p {
+    line-height: 17px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -246,6 +311,9 @@ p {
     right: 10%;
     bottom: -360px;
     height: 150%;
+  }
+  .gallery .col-text {
+    display: none;
   }
 }
 
@@ -256,6 +324,25 @@ p {
   }
   .slide-text .col-phone {
     display: none;
+  }
+  .gallery .col-gallery .slider-gallery {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .gallery .col-gallery .slider-gallery img {
+    margin: 10px auto;
+    height: 80%;
+    width: 80%;
+  }
+  .gallery .col-gallery .btn-arrow {
+    margin: auto;
+    text-align: center;
+    float: none;
+  }
+  .gallery .col-gallery .btn-arrow a {
+    padding: 5px;
   }
 }
 

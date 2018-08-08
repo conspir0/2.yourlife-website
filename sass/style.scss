@@ -37,7 +37,7 @@ h1{
 h7 {
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     letter-spacing: 3px;
     color: $title-color;
 }
@@ -45,6 +45,17 @@ p {
     font-size: 12px;
     line-height: 25px;
     letter-spacing: 1px;
+}
+.btn-arrow {
+    a {
+        padding-left: 10px;
+        color: $font-color;
+        font-weight: 800;
+        font-size: 25px;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 // Main jumbotron ---------------------------------------------------------
@@ -201,28 +212,71 @@ p {
         }
     }
     .btn-arrow {
-        a {
-            color: $font-color;
-            padding-left: 20px;
-            font-weight: 800;
-            font-size: 25px;
-            &:hover {
-                text-decoration: none;
-            .btn-arrow {
-                }
-            }
-        }
         a:first-child {
             padding-left: 50px;
         }
     }
 }
 
+// Gallery ---------------------------------------------------------
+.gallery {
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+    height: 100%;
+    background-color: $bg-color;
+    .col-text {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        text-align: center;
+        img {
+            margin: 0 auto 30px;
+            height: 60px;
+            width: 60px;
+        }
+        h7 {
+            font-weight: 400;
+        }
+    }
+    .col-gallery {
+        .btn-arrow {
+            float: right;
+        }
+        .slider-gallery {
+            display: flex;
+            justify-content: space-between;
+            img {
+                margin-left: 20px;
+                width: 340px;
+                &:hover {
+                    filter: grayscale(70%);
+                }
+            }
+        }
+    }
+}
 
 
-
-
-
+@media (max-width: 1199px) {
+    .gallery {
+        .col-gallery .slider-gallery img {
+        height: 95%;
+        width: 320px;
+        }
+        .col-text {
+            img {
+                margin-bottom: 10px;
+            }
+            h7 {
+                margin-bottom: 10px;
+            }
+            p {
+                line-height: 17px;
+            }
+        }
+    }
+}
 
 @media (max-width: 992px) {
     .hand .col-phone-hand img {
@@ -230,8 +284,11 @@ p {
         bottom: -360px;
         height: 150%;
     }
-
+    .gallery .col-text {
+        display: none;
+    }
 }
+
 @media (max-width: 768px) {
     .hand .col-phone-hand img {
         height: 120%;
@@ -240,7 +297,27 @@ p {
     .slide-text .col-phone {
         display: none;
     }
+    .gallery .col-gallery {
+        .slider-gallery {
+            flex-direction: column;
+            justify-content: center;
+            img {
+                margin: 10px auto;
+                height: 80%;
+                width: 80%;
+            }
+        }
+        .btn-arrow {
+            margin: auto;
+            text-align: center;
+            float: none;
+            a {
+                padding: 5px;
+            }
+        }
+    }      
 }
+
 @media (max-width: 576px) {
     .hand .col-box {
         text-align: center;
