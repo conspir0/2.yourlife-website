@@ -112,7 +112,7 @@ p {
   height: 75px;
   width: 75px;
   margin: auto;
-  background: url(/images/logo/logo-white.png) center no-repeat;
+  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/logo/logo-white.png) center no-repeat;
 }
 
 .main-jumbotron nav ul li a .photo-flash:hover {
