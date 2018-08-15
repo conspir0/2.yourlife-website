@@ -108,6 +108,21 @@ p {
   text-shadow: 0 0 10px #fff;
 }
 
+.main-jumbotron nav ul li a .photo-flash {
+  height: 75px;
+  width: 75px;
+  margin: auto;
+  background: url(/images/logo/logo-white.png) center no-repeat;
+}
+
+.main-jumbotron nav ul li a .photo-flash:hover {
+  animation: rotate 1.5s infinite;
+}
+
+.main-jumbotron nav ul li a .photo-flash:hover .flash {
+  animation: light 1.5s infinite;
+}
+
 .main-jumbotron .navbar-dark .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
@@ -171,6 +186,39 @@ p {
 
 .main-jumbotron .social-media .dribbble {
   background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-dribbble.png) center no-repeat;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  35% {
+    transform: rotate(-45deg);
+  }
+  47% {
+    transform: rotate(-45deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes light {
+  34% {
+    height: 0;
+    width: 0;
+  }
+  35% {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 50px;
+  }
+  40% {
+    height: 0;
+    width: 0;
+  }
 }
 
 .hand {
@@ -299,7 +347,7 @@ p {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  background: url(/images/sub-jumbotron/sub-jumbotron.png) center/cover no-repeat;
+  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/sub-jumbotron/sub-jumbotron.png) center/cover no-repeat;
   height: 100vh;
 }
 
@@ -328,7 +376,7 @@ p {
   height: 50px;
   width: 50px;
   border-radius: 0 5px 5px 0;
-  background: url(/images/small-icons/fa-check.png) center no-repeat;
+  background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-check.png) center no-repeat;
   background-color: #16a085;
 }
 
