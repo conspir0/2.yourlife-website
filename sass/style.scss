@@ -293,7 +293,7 @@ p {
     }
 }
 
-// Gallery ---------------------------------------------------------
+// Subscribe ---------------------------------------------------------
 .sub {
     display: flex;
     flex-direction: column;
@@ -327,7 +327,66 @@ p {
     }
 }
 
- 
+// Download ---------------------------------------------------------
+.download {
+    background-color: $bg-color;
+    text-align: center;
+    padding: 100px 0;
+    .download-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+        max-width: 750px;
+        p {
+            text-transform: uppercase;
+        }
+    }
+    .download-boxes{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px 0;
+        a {
+            .download-box {
+                display: flex;
+                flex-direction: row;
+                margin: 0 20px;
+                line-height: 42px;
+                width: 192px;
+                background-color: $btn-bgcolor;
+                color: $bg-color;
+                transition: $transition-time;
+                .d-box-text {
+                    font-size: 12px;
+                    font-weight: 500;
+                    text-align: left;
+                    width: 150px;
+                    padding-left: 15px;
+                }
+                .d-box-image-1 {
+                    background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons//fa-apple.png) center no-repeat;
+                }
+                .d-box-image-2 {
+                    background: url(https://raw.githubusercontent.com/conspir0/3.yourlife-website/master/images/small-icons/fa-android.png) center no-repeat;
+                }
+                .d-box-image {
+                    height: 42px;
+                    width: 42px;
+                    background-color: $btn-hover-bgcolor;
+                }
+                &:hover {
+                    background-color: $btn-hover-bgcolor;
+                }
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
 
 @media (max-width: 1199px) {
     .gallery {
@@ -403,6 +462,15 @@ p {
         }
         button {
             margin: 0 auto;
+        }
+    }
+    .download {
+        padding-bottom: 50px;
+        .download-boxes {
+            flex-direction: column;
+            a {
+                margin: 10px auto;
+            }
         }
     }
 }
