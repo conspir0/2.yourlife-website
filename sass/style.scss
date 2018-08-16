@@ -387,7 +387,29 @@ p {
     }
 }
 
+// Footer ---------------------------------------------------------
+footer {
+    position: relative;
+    padding: 40px 0 10px;
+    a {
+        font-size: 12px;
+        color: $font-color;
+        &:hover{
+            color: $btn-hover-bgcolor;   
+        }
+    }
+    h7 a {
+        font-size: 18px;
+        color: $title-color;
+    }
+    img {
+        position: absolute;
+        bottom: 10px;
+        right: 30px;
+    }
+}
 
+// @media ---------------------------------------------------------
 @media (max-width: 1199px) {
     .gallery {
         .col-gallery .slider-gallery img {
@@ -472,5 +494,8 @@ p {
                 margin: 10px auto;
             }
         }
+    }
+    footer img {
+        display: none;
     }
 }

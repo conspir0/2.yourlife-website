@@ -455,6 +455,31 @@ p {
   text-decoration: none;
 }
 
+footer {
+  position: relative;
+  padding: 40px 0 10px;
+}
+
+footer a {
+  font-size: 12px;
+  color: #373737;
+}
+
+footer a:hover {
+  color: #147d68;
+}
+
+footer h7 a {
+  font-size: 18px;
+  color: #16a085;
+}
+
+footer img {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+}
+
 @media (max-width: 1199px) {
   .gallery .col-gallery .slider-gallery img {
     height: 95%;
@@ -536,6 +561,9 @@ p {
   }
   .download .download-boxes a {
     margin: 10px auto;
+  }
+  footer img {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.prefixed.css.map */
