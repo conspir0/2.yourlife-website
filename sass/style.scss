@@ -285,6 +285,7 @@ p {
             img {
                 margin-left: 20px;
                 width: 340px;
+                height: 250px;
                 &:hover {
                     filter: grayscale(70%);
                 }
@@ -453,8 +454,10 @@ footer {
         display: none;
     }
     .gallery {
-        height: 100vh;
+        min-height: 100vh;
+        height: 100%;
         .col-gallery {
+            padding: 50px 0;
             .slider-gallery {
                 flex-direction: column;
                 justify-content: center;

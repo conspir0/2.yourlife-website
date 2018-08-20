@@ -312,6 +312,7 @@ p {
 .gallery .col-gallery .slider-gallery img {
   margin-left: 20px;
   width: 340px;
+  height: 250px;
 }
 
 .gallery .col-gallery .slider-gallery img:hover {
@@ -486,7 +487,11 @@ footer img {
     display: none;
   }
   .gallery {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
+  }
+  .gallery .col-gallery {
+    padding: 50px 0;
   }
   .gallery .col-gallery .slider-gallery {
     flex-direction: column;
